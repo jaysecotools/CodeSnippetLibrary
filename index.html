@@ -828,6 +828,105 @@
     // Email validation
     const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
     if (!emailRegex.test(email)) {
+ {
+        id: 1,
+        title: "Responsive Navigation Bar",
+        category: "CSS",
+        description: "A responsive navigation bar that collapses into a hamburger menu on mobile devices.",
+        code: `/* Basic responsive navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    padding: 0 1rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+}`,
+        tags: ["responsive", "navigation", "mobile"],
+        createdAt: new Date('2023-10-15').toISOString(),
+        lastUsed: new Date('2023-11-20').toISOString(),
+        usageCount: 5,
+        favorite: false
+    },
+    {
+        id: 2,
+        title: "AJAX Request Function",
+        category: "JavaScript",
+        description: "A reusable function for making AJAX requests with error handling.",
+        code: `function makeRequest(url, method = 'GET', data = null) {
+    return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        
+        xhr.onload = function() {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                resolve(JSON.parse(xhr.responseText));
+            } else {
+                reject({
+                    status: xhr.status,
+                    statusText: xhr.statusText
+                });
+            }
+        };
+        
+        xhr.onerror = function() {
+            reject({
+                status: xhr.status,
+                statusText: xhr.statusText
+            });
+        };
+        
+        xhr.send(data ? JSON.stringify(data) : null);
+    });
+}`,
+        tags: ["ajax", "http", "requests"],
+        createdAt: new Date('2023-10-16').toISOString(),
+        lastUsed: new Date('2023-11-18').toISOString(),
+        usageCount: 8,
+        favorite: true
+    },
+    {
+        id: 3,
+        title: "Form Validation",
+        category: "JavaScript",
+        description: "Client-side form validation with custom error messages.",
+        code: `function validateForm(form) {
+    const errors = [];
+    const email = form.email.value;
+    const password = form.password.value;
+    
+    // Email validation
+    const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+    if (!emailRegex.test(email)) {
         errors.push('Please enter a valid email address');
     }
     
@@ -838,12 +937,12 @@
     
     return errors;
 }`,
-    tags: ["forms", "validation", "regex"],
-    createdAt: new Date('2023-10-17').toISOString(),
-    lastUsed: new Date('2023-11-15').toISOString(),
-    usageCount: 12,
-    favorite: false
-},
+        tags: ["forms", "validation", "regex"],
+        createdAt: new Date('2023-10-17').toISOString(),
+        lastUsed: new Date('2023-11-15').toISOString(),
+        usageCount: 12,
+        favorite: false
+    },
 {
     id: 4,
     title: "CSS Grid Layout",
