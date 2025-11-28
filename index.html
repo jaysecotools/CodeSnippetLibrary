@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js"></script>
     <style>
+        /* ... (all the same CSS styles remain exactly as before) ... */
         :root {
             --primary: #4361ee;
             --secondary: #3f37c9;
@@ -729,12 +730,12 @@
 
         // Extensive snippet library with 30+ code snippets
         let snippets = [
-{
-    id: 1,
-    title: "Responsive Navigation Bar",
-    category: "CSS",
-    description: "A responsive navigation bar that collapses into a hamburger menu on mobile devices.",
-    code: `/* Basic responsive navigation */
+            {
+                id: 1,
+                title: "Responsive Navigation Bar",
+                category: "CSS",
+                description: "A responsive navigation bar that collapses into a hamburger menu on mobile devices.",
+                code: `/* Basic responsive navigation */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -771,18 +772,18 @@
         display: block;
     }
 }`,
-    tags: ["responsive", "navigation", "mobile"],
-    createdAt: new Date('2023-10-15').toISOString(),
-    lastUsed: new Date('2023-11-20').toISOString(),
-    usageCount: 5,
-    favorite: false
-},
-{
-    id: 2,
-    title: "AJAX Request Function",
-    category: "JavaScript",
-    description: "A reusable function for making AJAX requests with error handling.",
-    code: `function makeRequest(url, method = 'GET', data = null) {
+                tags: ["responsive", "navigation", "mobile"],
+                createdAt: new Date('2023-10-15').toISOString(),
+                lastUsed: new Date('2023-11-20').toISOString(),
+                usageCount: 5,
+                favorite: false
+            },
+            {
+                id: 2,
+                title: "AJAX Request Function",
+                category: "JavaScript",
+                description: "A reusable function for making AJAX requests with error handling.",
+                code: `function makeRequest(url, method = 'GET', data = null) {
     return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
         xhr.open(method, url);
@@ -809,117 +810,18 @@
         xhr.send(data ? JSON.stringify(data) : null);
     });
 }`,
-    tags: ["ajax", "http", "requests"],
-    createdAt: new Date('2023-10-16').toISOString(),
-    lastUsed: new Date('2023-11-18').toISOString(),
-    usageCount: 8,
-    favorite: true
-},
-{
-    id: 3,
-    title: "Form Validation",
-    category: "JavaScript",
-    description: "Client-side form validation with custom error messages.",
-    code: `function validateForm(form) {
-    const errors = [];
-    const email = form.email.value;
-    const password = form.password.value;
-    
-    // Email validation
-    const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
-    if (!emailRegex.test(email)) {
- {
-        id: 1,
-        title: "Responsive Navigation Bar",
-        category: "CSS",
-        description: "A responsive navigation bar that collapses into a hamburger menu on mobile devices.",
-        code: `/* Basic responsive navigation */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #333;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li {
-    padding: 0 1rem;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-}
-
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .hamburger {
-        display: block;
-    }
-}`,
-        tags: ["responsive", "navigation", "mobile"],
-        createdAt: new Date('2023-10-15').toISOString(),
-        lastUsed: new Date('2023-11-20').toISOString(),
-        usageCount: 5,
-        favorite: false
-    },
-    {
-        id: 2,
-        title: "AJAX Request Function",
-        category: "JavaScript",
-        description: "A reusable function for making AJAX requests with error handling.",
-        code: `function makeRequest(url, method = 'GET', data = null) {
-    return new Promise((resolve, reject) => {
-        const xhr = new XMLHttpRequest();
-        xhr.open(method, url);
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        
-        xhr.onload = function() {
-            if (xhr.status >= 200 && xhr.status < 300) {
-                resolve(JSON.parse(xhr.responseText));
-            } else {
-                reject({
-                    status: xhr.status,
-                    statusText: xhr.statusText
-                });
-            }
-        };
-        
-        xhr.onerror = function() {
-            reject({
-                status: xhr.status,
-                statusText: xhr.statusText
-            });
-        };
-        
-        xhr.send(data ? JSON.stringify(data) : null);
-    });
-}`,
-        tags: ["ajax", "http", "requests"],
-        createdAt: new Date('2023-10-16').toISOString(),
-        lastUsed: new Date('2023-11-18').toISOString(),
-        usageCount: 8,
-        favorite: true
-    },
-    {
-        id: 3,
-        title: "Form Validation",
-        category: "JavaScript",
-        description: "Client-side form validation with custom error messages.",
-        code: `function validateForm(form) {
+                tags: ["ajax", "http", "requests"],
+                createdAt: new Date('2023-10-16').toISOString(),
+                lastUsed: new Date('2023-11-18').toISOString(),
+                usageCount: 8,
+                favorite: true
+            },
+            {
+                id: 3,
+                title: "Form Validation",
+                category: "JavaScript",
+                description: "Client-side form validation with custom error messages.",
+                code: `function validateForm(form) {
     const errors = [];
     const email = form.email.value;
     const password = form.password.value;
@@ -937,18 +839,18 @@
     
     return errors;
 }`,
-        tags: ["forms", "validation", "regex"],
-        createdAt: new Date('2023-10-17').toISOString(),
-        lastUsed: new Date('2023-11-15').toISOString(),
-        usageCount: 12,
-        favorite: false
-    },
-{
-    id: 4,
-    title: "CSS Grid Layout",
-    category: "CSS",
-    description: "A responsive grid layout using CSS Grid.",
-    code: `/* Basic CSS Grid layout */
+                tags: ["forms", "validation", "regex"],
+                createdAt: new Date('2023-10-17').toISOString(),
+                lastUsed: new Date('2023-11-15').toISOString(),
+                usageCount: 12,
+                favorite: false
+            },
+            {
+                id: 4,
+                title: "CSS Grid Layout",
+                category: "CSS",
+                description: "A responsive grid layout using CSS Grid.",
+                code: `/* Basic CSS Grid layout */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -968,18 +870,18 @@
         grid-template-columns: 1fr;
     }
 }`,
-    tags: ["grid", "layout", "responsive"],
-    createdAt: new Date('2023-10-18').toISOString(),
-    lastUsed: new Date('2023-11-22').toISOString(),
-    usageCount: 7,
-    favorite: true
-},
-{
-    id: 5,
-    title: "Local Storage Helper",
-    category: "JavaScript",
-    description: "Helper functions for working with browser local storage.",
-    code: `// Local Storage Helper Functions
+                tags: ["grid", "layout", "responsive"],
+                createdAt: new Date('2023-10-18').toISOString(),
+                lastUsed: new Date('2023-11-22').toISOString(),
+                usageCount: 7,
+                favorite: true
+            },
+            {
+                id: 5,
+                title: "Local Storage Helper",
+                category: "JavaScript",
+                description: "Helper functions for working with browser local storage.",
+                code: `// Local Storage Helper Functions
 const storageHelper = {
     set: function(key, value) {
         try {
@@ -1021,18 +923,18 @@ const storageHelper = {
         }
     }
 };`,
-    tags: ["storage", "browser", "utilities"],
-    createdAt: new Date('2023-10-19').toISOString(),
-    lastUsed: new Date('2023-11-21').toISOString(),
-    usageCount: 15,
-    favorite: true
-},
-{
-    id: 6,
-    title: "Button Hover Effects",
-    category: "CSS",
-    description: "Various CSS hover effects for buttons.",
-    code: `/* Button hover effects */
+                tags: ["storage", "browser", "utilities"],
+                createdAt: new Date('2023-10-19').toISOString(),
+                lastUsed: new Date('2023-11-21').toISOString(),
+                usageCount: 15,
+                favorite: true
+            },
+            {
+                id: 6,
+                title: "Button Hover Effects",
+                category: "CSS",
+                description: "Various CSS hover effects for buttons.",
+                code: `/* Button hover effects */
 .btn {
     padding: 10px 20px;
     border: none;
@@ -1070,18 +972,18 @@ const storageHelper = {
 .btn-effect-3:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }`,
-    tags: ["buttons", "hover", "effects"],
-    createdAt: new Date('2023-10-20').toISOString(),
-    lastUsed: new Date('2023-11-19').toISOString(),
-    usageCount: 9,
-    favorite: false
-},
-{
-    id: 7,
-    title: "Debounce Function",
-    category: "JavaScript",
-    description: "A debounce function to limit how often a function can be called.",
-    code: `function debounce(func, wait, immediate) {
+                tags: ["buttons", "hover", "effects"],
+                createdAt: new Date('2023-10-20').toISOString(),
+                lastUsed: new Date('2023-11-19').toISOString(),
+                usageCount: 9,
+                favorite: false
+            },
+            {
+                id: 7,
+                title: "Debounce Function",
+                category: "JavaScript",
+                description: "A debounce function to limit how often a function can be called.",
+                code: `function debounce(func, wait, immediate) {
     let timeout;
     return function executedFunction(...args) {
         const later = () => {
@@ -1097,18 +999,18 @@ const storageHelper = {
 
 // Usage example:
 // const debouncedSearch = debounce(searchFunction, 300);`,
-    tags: ["performance", "optimization", "utilities"],
-    createdAt: new Date('2023-10-21').toISOString(),
-    lastUsed: new Date('2023-11-17').toISOString(),
-    usageCount: 6,
-    favorite: true
-},
-{
-    id: 8,
-    title: "Flexbox Centering",
-    category: "CSS",
-    description: "Center elements horizontally and vertically using Flexbox.",
-    code: `/* Center horizontally and vertically */
+                tags: ["performance", "optimization", "utilities"],
+                createdAt: new Date('2023-10-21').toISOString(),
+                lastUsed: new Date('2023-11-17').toISOString(),
+                usageCount: 6,
+                favorite: true
+            },
+            {
+                id: 8,
+                title: "Flexbox Centering",
+                category: "CSS",
+                description: "Center elements horizontally and vertically using Flexbox.",
+                code: `/* Center horizontally and vertically */
 .center-container {
     display: flex;
     justify-content: center;
@@ -1127,18 +1029,18 @@ const storageHelper = {
     display: flex;
     align-items: center;
 }`,
-    tags: ["flexbox", "centering", "layout"],
-    createdAt: new Date('2023-10-22').toISOString(),
-    lastUsed: new Date('2023-11-16').toISOString(),
-    usageCount: 11,
-    favorite: false
-},
-{
-    id: 9,
-    title: "Fetch API Wrapper",
-    category: "JavaScript",
-    description: "A wrapper function for the Fetch API with error handling.",
-    code: `async function fetchData(url, options = {}) {
+                tags: ["flexbox", "centering", "layout"],
+                createdAt: new Date('2023-10-22').toISOString(),
+                lastUsed: new Date('2023-11-16').toISOString(),
+                usageCount: 11,
+                favorite: false
+            },
+            {
+                id: 9,
+                title: "Fetch API Wrapper",
+                category: "JavaScript",
+                description: "A wrapper function for the Fetch API with error handling.",
+                code: `async function fetchData(url, options = {}) {
     try {
         const response = await fetch(url, {
             headers: {
@@ -1163,18 +1065,18 @@ const storageHelper = {
 // Usage examples:
 // const data = await fetchData('/api/users');
 // const user = await fetchData('/api/users/1', { method: 'POST', body: JSON.stringify(userData) });`,
-    tags: ["fetch", "api", "http"],
-    createdAt: new Date('2023-10-23').toISOString(),
-    lastUsed: new Date('2023-11-23').toISOString(),
-    usageCount: 14,
-    favorite: true
-},
-{
-    id: 10,
-    title: "CSS Variables",
-    category: "CSS",
-    description: "Using CSS custom properties (variables) for consistent theming.",
-    code: `/* Define CSS variables */
+                tags: ["fetch", "api", "http"],
+                createdAt: new Date('2023-10-23').toISOString(),
+                lastUsed: new Date('2023-11-23').toISOString(),
+                usageCount: 14,
+                favorite: true
+            },
+            {
+                id: 10,
+                title: "CSS Variables",
+                category: "CSS",
+                description: "Using CSS custom properties (variables) for consistent theming.",
+                code: `/* Define CSS variables */
 :root {
     --primary-color: #4361ee;
     --secondary-color: #3f37c9;
@@ -1205,18 +1107,18 @@ const storageHelper = {
         --bg-color: #212529;
     }
 }`,
-    tags: ["variables", "theming", "custom-properties"],
-    createdAt: new Date('2023-10-24').toISOString(),
-    lastUsed: new Date('2023-11-14').toISOString(),
-    usageCount: 8,
-    favorite: false
-},
-{
-    id: 11,
-    title: "Array Utility Functions",
-    category: "JavaScript",
-    description: "Common array manipulation functions for everyday use.",
-    code: `// Remove duplicates from array
+                tags: ["variables", "theming", "custom-properties"],
+                createdAt: new Date('2023-10-24').toISOString(),
+                lastUsed: new Date('2023-11-14').toISOString(),
+                usageCount: 8,
+                favorite: false
+            },
+            {
+                id: 11,
+                title: "Array Utility Functions",
+                category: "JavaScript",
+                description: "Common array manipulation functions for everyday use.",
+                code: `// Remove duplicates from array
 const removeDuplicates = (arr) => [...new Set(arr)];
 
 // Flatten nested arrays
@@ -1242,18 +1144,18 @@ const chunkArray = (arr, size) => {
     }
     return chunks;
 };`,
-    tags: ["arrays", "utilities", "manipulation"],
-    createdAt: new Date('2023-10-25').toISOString(),
-    lastUsed: new Date('2023-11-13').toISOString(),
-    usageCount: 10,
-    favorite: true
-},
-{
-    id: 12,
-    title: "CSS Card Component",
-    category: "CSS",
-    description: "A reusable card component with hover effects.",
-    code: `/* Card component */
+                tags: ["arrays", "utilities", "manipulation"],
+                createdAt: new Date('2023-10-25').toISOString(),
+                lastUsed: new Date('2023-11-13').toISOString(),
+                usageCount: 10,
+                favorite: true
+            },
+            {
+                id: 12,
+                title: "CSS Card Component",
+                category: "CSS",
+                description: "A reusable card component with hover effects.",
+                code: `/* Card component */
 .card {
     background: white;
     border-radius: 10px;
@@ -1282,18 +1184,18 @@ const chunkArray = (arr, size) => {
     background: #f8f9fa;
     border-top: 1px solid #e9ecef;
 }`,
-    tags: ["card", "component", "ui"],
-    createdAt: new Date('2023-10-26').toISOString(),
-    lastUsed: new Date('2023-11-12').toISOString(),
-    usageCount: 7,
-    favorite: false
-},
-{
-    id: 13,
-    title: "Date Formatting Function",
-    category: "JavaScript",
-    description: "Format dates in various common formats.",
-    code: `function formatDate(date, format = 'YYYY-MM-DD') {
+                tags: ["card", "component", "ui"],
+                createdAt: new Date('2023-10-26').toISOString(),
+                lastUsed: new Date('2023-11-12').toISOString(),
+                usageCount: 7,
+                favorite: false
+            },
+            {
+                id: 13,
+                title: "Date Formatting Function",
+                category: "JavaScript",
+                description: "Format dates in various common formats.",
+                code: `function formatDate(date, format = 'YYYY-MM-DD') {
     const d = new Date(date);
     const year = d.getFullYear();
     const month = String(d.getMonth() + 1).padStart(2, '0');
@@ -1317,18 +1219,18 @@ const chunkArray = (arr, size) => {
 // formatDate(new Date()) // "2023-10-15"
 // formatDate(new Date(), 'DD/MM/YYYY') // "15/10/2023"
 // formatDate(new Date(), 'YYYY-MM-DD HH:mm:ss') // "2023-10-15 14:30:45"`,
-    tags: ["date", "formatting", "utilities"],
-    createdAt: new Date('2023-10-27').toISOString(),
-    lastUsed: new Date('2023-11-11').toISOString(),
-    usageCount: 9,
-    favorite: true
-},
-{
-    id: 14,
-    title: "CSS Loading Spinner",
-    category: "CSS",
-    description: "A pure CSS loading spinner animation.",
-    code: `/* CSS loading spinner */
+                tags: ["date", "formatting", "utilities"],
+                createdAt: new Date('2023-10-27').toISOString(),
+                lastUsed: new Date('2023-11-11').toISOString(),
+                usageCount: 9,
+                favorite: true
+            },
+            {
+                id: 14,
+                title: "CSS Loading Spinner",
+                category: "CSS",
+                description: "A pure CSS loading spinner animation.",
+                code: `/* CSS loading spinner */
 .spinner {
     width: 40px;
     height: 40px;
@@ -1364,18 +1266,18 @@ const chunkArray = (arr, size) => {
 .spinner-danger {
     border-top-color: #e74c3c;
 }`,
-    tags: ["loading", "spinner", "animation"],
-    createdAt: new Date('2023-10-28').toISOString(),
-    lastUsed: new Date('2023-11-10').toISOString(),
-    usageCount: 6,
-    favorite: false
-},
-{
-    id: 15,
-    title: "Cookie Utility Functions",
-    category: "JavaScript",
-    description: "Helper functions for working with browser cookies.",
-    code: `const cookieUtils = {
+                tags: ["loading", "spinner", "animation"],
+                createdAt: new Date('2023-10-28').toISOString(),
+                lastUsed: new Date('2023-11-10').toISOString(),
+                usageCount: 6,
+                favorite: false
+            },
+            {
+                id: 15,
+                title: "Cookie Utility Functions",
+                category: "JavaScript",
+                description: "Helper functions for working with browser cookies.",
+                code: `const cookieUtils = {
     set: function(name, value, days = 7) {
         const expires = new Date();
         expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -1402,18 +1304,18 @@ const chunkArray = (arr, size) => {
 // cookieUtils.set('user_preference', 'dark_mode');
 // const preference = cookieUtils.get('user_preference');
 // cookieUtils.delete('user_preference');`,
-    tags: ["cookies", "browser", "storage"],
-    createdAt: new Date('2023-10-29').toISOString(),
-    lastUsed: new Date('2023-11-09').toISOString(),
-    usageCount: 5,
-    favorite: false
-},
-{
-    id: 16,
-    title: "CSS Text Effects",
-    category: "CSS",
-    description: "Various text styling effects and animations.",
-    code: `/* Gradient text */
+                tags: ["cookies", "browser", "storage"],
+                createdAt: new Date('2023-10-29').toISOString(),
+                lastUsed: new Date('2023-11-09').toISOString(),
+                usageCount: 5,
+                favorite: false
+            },
+            {
+                id: 16,
+                title: "CSS Text Effects",
+                category: "CSS",
+                description: "Various text styling effects and animations.",
+                code: `/* Gradient text */
 .gradient-text {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     -webkit-background-clip: text;
@@ -1449,18 +1351,18 @@ const chunkArray = (arr, size) => {
     color: #fff;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073;
 }`,
-    tags: ["text", "effects", "animation"],
-    createdAt: new Date('2023-10-30').toISOString(),
-    lastUsed: new Date('2023-11-08').toISOString(),
-    usageCount: 4,
-    favorite: false
-},
-{
-    id: 17,
-    title: "String Utility Functions",
-    category: "JavaScript",
-    description: "Common string manipulation functions.",
-    code: `// Capitalize first letter of each word
+                tags: ["text", "effects", "animation"],
+                createdAt: new Date('2023-10-30').toISOString(),
+                lastUsed: new Date('2023-11-08').toISOString(),
+                usageCount: 4,
+                favorite: false
+            },
+            {
+                id: 17,
+                title: "String Utility Functions",
+                category: "JavaScript",
+                description: "Common string manipulation functions.",
+                code: `// Capitalize first letter of each word
 const capitalizeWords = (str) => {
     return str.replace(/\\b\\w/g, char => char.toUpperCase());
 };
@@ -1490,18 +1392,18 @@ const isPalindrome = (str) => {
     const cleanStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
     return cleanStr === cleanStr.split('').reverse().join('');
 };`,
-    tags: ["strings", "utilities", "manipulation"],
-    createdAt: new Date('2023-10-31').toISOString(),
-    lastUsed: new Date('2023-11-07').toISOString(),
-    usageCount: 8,
-    favorite: true
-},
-{
-    id: 18,
-    title: "CSS Button Styles",
-    category: "CSS",
-    description: "A collection of modern button styles.",
-    code: `/* Base button style */
+                tags: ["strings", "utilities", "manipulation"],
+                createdAt: new Date('2023-10-31').toISOString(),
+                lastUsed: new Date('2023-11-07').toISOString(),
+                usageCount: 8,
+                favorite: true
+            },
+            {
+                id: 18,
+                title: "CSS Button Styles",
+                category: "CSS",
+                description: "A collection of modern button styles.",
+                code: `/* Base button style */
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -1558,18 +1460,18 @@ const isPalindrome = (str) => {
     padding: 16px 32px;
     font-size: 18px;
 }`,
-    tags: ["buttons", "styles", "ui"],
-    createdAt: new Date('2023-11-01').toISOString(),
-    lastUsed: new Date('2023-11-06').toISOString(),
-    usageCount: 12,
-    favorite: true
-},
-{
-    id: 19,
-    title: "DOM Manipulation Helpers",
-    category: "JavaScript",
-    description: "Utility functions for common DOM operations.",
-    code: `// Create element with attributes and content
+                tags: ["buttons", "styles", "ui"],
+                createdAt: new Date('2023-11-01').toISOString(),
+                lastUsed: new Date('2023-11-06').toISOString(),
+                usageCount: 12,
+                favorite: true
+            },
+            {
+                id: 19,
+                title: "DOM Manipulation Helpers",
+                category: "JavaScript",
+                description: "Utility functions for common DOM operations.",
+                code: `// Create element with attributes and content
 function createElement(tag, attributes = {}, content = '') {
     const element = document.createElement(tag);
     
@@ -1620,18 +1522,18 @@ function isElementInViewport(element) {
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }`,
-    tags: ["dom", "manipulation", "utilities"],
-    createdAt: new Date('2023-11-02').toISOString(),
-    lastUsed: new Date('2023-11-05').toISOString(),
-    usageCount: 15,
-    favorite: true
-},
-{
-    id: 20,
-    title: "CSS Media Queries",
-    category: "CSS",
-    description: "Common media queries for responsive design.",
-    code: `/* Mobile First Approach */
+                tags: ["dom", "manipulation", "utilities"],
+                createdAt: new Date('2023-11-02').toISOString(),
+                lastUsed: new Date('2023-11-05').toISOString(),
+                usageCount: 15,
+                favorite: true
+            },
+            {
+                id: 20,
+                title: "CSS Media Queries",
+                category: "CSS",
+                description: "Common media queries for responsive design.",
+                code: `/* Mobile First Approach */
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -1703,18 +1605,18 @@ function isElementInViewport(element) {
         line-height: 1.4;
     }
 }`,
-    tags: ["media-queries", "responsive", "breakpoints"],
-    createdAt: new Date('2023-11-03').toISOString(),
-    lastUsed: new Date('2023-11-04').toISOString(),
-    usageCount: 11,
-    favorite: false
-},
-{
-    id: 21,
-    title: "Event Manager",
-    category: "JavaScript",
-    description: "A simple event management system for custom events.",
-    code: `class EventManager {
+                tags: ["media-queries", "responsive", "breakpoints"],
+                createdAt: new Date('2023-11-03').toISOString(),
+                lastUsed: new Date('2023-11-04').toISOString(),
+                usageCount: 11,
+                favorite: false
+            },
+            {
+                id: 21,
+                title: "Event Manager",
+                category: "JavaScript",
+                description: "A simple event management system for custom events.",
+                code: `class EventManager {
     constructor() {
         this.events = {};
     }
@@ -1757,18 +1659,18 @@ function isElementInViewport(element) {
 // const events = new EventManager();
 // events.on('userLogin', (user) => console.log('User logged in:', user));
 // events.emit('userLogin', { name: 'John', id: 1 });`,
-    tags: ["events", "pubsub", "patterns"],
-    createdAt: new Date('2023-11-04').toISOString(),
-    lastUsed: new Date('2023-11-03').toISOString(),
-    usageCount: 6,
-    favorite: true
-},
-{
-    id: 22,
-    title: "CSS Animations",
-    category: "CSS",
-    description: "Common CSS animations for web elements.",
-    code: `/* Fade in animation */
+                tags: ["events", "pubsub", "patterns"],
+                createdAt: new Date('2023-11-04').toISOString(),
+                lastUsed: new Date('2023-11-03').toISOString(),
+                usageCount: 6,
+                favorite: true
+            },
+            {
+                id: 22,
+                title: "CSS Animations",
+                category: "CSS",
+                description: "Common CSS animations for web elements.",
+                code: `/* Fade in animation */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -1841,18 +1743,18 @@ function isElementInViewport(element) {
 .shake {
     animation: shake 0.5s;
 }`,
-    tags: ["animations", "keyframes", "effects"],
-    createdAt: new Date('2023-11-05').toISOString(),
-    lastUsed: new Date('2023-11-02').toISOString(),
-    usageCount: 8,
-    favorite: false
-},
-{
-    id: 23,
-    title: "URL Parameter Parser",
-    category: "JavaScript",
-    description: "Parse and manipulate URL query parameters.",
-    code: `const urlParams = {
+                tags: ["animations", "keyframes", "effects"],
+                createdAt: new Date('2023-11-05').toISOString(),
+                lastUsed: new Date('2023-11-02').toISOString(),
+                usageCount: 8,
+                favorite: false
+            },
+            {
+                id: 23,
+                title: "URL Parameter Parser",
+                category: "JavaScript",
+                description: "Parse and manipulate URL query parameters.",
+                code: `const urlParams = {
     // Get all URL parameters as object
     getAll: function() {
         const params = new URLSearchParams(window.location.search);
@@ -1902,18 +1804,18 @@ function isElementInViewport(element) {
 // const userId = urlParams.get('user_id');
 // urlParams.set('page', '2');
 // urlParams.remove('filter');`,
-    tags: ["url", "parameters", "utilities"],
-    createdAt: new Date('2023-11-06').toISOString(),
-    lastUsed: new Date('2023-11-01').toISOString(),
-    usageCount: 7,
-    favorite: true
-},
-{
-    id: 24,
-    title: "CSS Form Styling",
-    category: "CSS",
-    description: "Modern form styling with focus states and validation.",
-    code: `/* Form container */
+                tags: ["url", "parameters", "utilities"],
+                createdAt: new Date('2023-11-06').toISOString(),
+                lastUsed: new Date('2023-11-01').toISOString(),
+                usageCount: 7,
+                favorite: true
+            },
+            {
+                id: 24,
+                title: "CSS Form Styling",
+                category: "CSS",
+                description: "Modern form styling with focus states and validation.",
+                code: `/* Form container */
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -1995,18 +1897,18 @@ function isElementInViewport(element) {
     cursor: not-allowed;
     transform: none;
 }`,
-    tags: ["forms", "styling", "validation"],
-    createdAt: new Date('2023-11-07').toISOString(),
-    lastUsed: new Date('2023-10-31').toISOString(),
-    usageCount: 9,
-    favorite: false
-},
-{
-    id: 25,
-    title: "Number Formatting",
-    category: "JavaScript",
-    description: "Format numbers for display (currency, percentages, etc.).",
-    code: `const numberUtils = {
+                tags: ["forms", "styling", "validation"],
+                createdAt: new Date('2023-11-07').toISOString(),
+                lastUsed: new Date('2023-10-31').toISOString(),
+                usageCount: 9,
+                favorite: false
+            },
+            {
+                id: 25,
+                title: "Number Formatting",
+                category: "JavaScript",
+                description: "Format numbers for display (currency, percentages, etc.).",
+                code: `const numberUtils = {
     // Format as currency
     formatCurrency: function(amount, currency = 'USD', locale = 'en-US') {
         return new Intl.NumberFormat(locale, {
@@ -2071,18 +1973,18 @@ function isElementInViewport(element) {
 // numberUtils.formatFileSize(1234567); // "1.18 MB"
 // numberUtils.formatPhoneNumber('1234567890'); // "(123) 456-7890"
 // numberUtils.abbreviateNumber(1234567); // "1.2M"`,
-    tags: ["numbers", "formatting", "utilities"],
-    createdAt: new Date('2023-11-08').toISOString(),
-    lastUsed: new Date('2023-10-30').toISOString(),
-    usageCount: 11,
-    favorite: true
-},
-{
-    id: 26,
-    title: "CSS Custom Scrollbar",
-    category: "CSS",
-    description: "Custom scrollbar styling for webkit browsers.",
-    code: `/* Custom scrollbar for webkit browsers (Chrome, Safari, Edge) */
+                tags: ["numbers", "formatting", "utilities"],
+                createdAt: new Date('2023-11-08').toISOString(),
+                lastUsed: new Date('2023-10-30').toISOString(),
+                usageCount: 11,
+                favorite: true
+            },
+            {
+                id: 26,
+                title: "CSS Custom Scrollbar",
+                category: "CSS",
+                description: "Custom scrollbar styling for webkit browsers.",
+                code: `/* Custom scrollbar for webkit browsers (Chrome, Safari, Edge) */
 .custom-scrollbar::-webkit-scrollbar {
     width: 8px;
 }
@@ -2133,18 +2035,18 @@ function isElementInViewport(element) {
 .hide-scrollbar::-webkit-scrollbar {
     display: none;  /* Chrome, Safari and Opera */
 }`,
-    tags: ["scrollbar", "styling", "webkit"],
-    createdAt: new Date('2023-11-09').toISOString(),
-    lastUsed: new Date('2023-10-29').toISOString(),
-    usageCount: 5,
-    favorite: false
-},
-{
-    id: 27,
-    title: "Random Data Generator",
-    category: "JavaScript",
-    description: "Generate random data for testing and development.",
-    code: `const randomData = {
+                tags: ["scrollbar", "styling", "webkit"],
+                createdAt: new Date('2023-11-09').toISOString(),
+                lastUsed: new Date('2023-10-29').toISOString(),
+                usageCount: 5,
+                favorite: false
+            },
+            {
+                id: 27,
+                title: "Random Data Generator",
+                category: "JavaScript",
+                description: "Generate random data for testing and development.",
+                code: `const randomData = {
     // Generate random number between min and max
     number: function(min = 0, max = 100) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -2211,18 +2113,18 @@ function isElementInViewport(element) {
 // randomData.color(); // Random hex color
 // randomData.name(); // Random full name
 // randomData.user(); // Random user object`,
-    tags: ["random", "testing", "data"],
-    createdAt: new Date('2023-11-10').toISOString(),
-    lastUsed: new Date('2023-10-28').toISOString(),
-    usageCount: 4,
-    favorite: false
-},
-{
-    id: 28,
-    title: "CSS Filter Effects",
-    category: "CSS",
-    description: "Apply filter effects to images and elements.",
-    code: `/* Grayscale filter */
+                tags: ["random", "testing", "data"],
+                createdAt: new Date('2023-11-10').toISOString(),
+                lastUsed: new Date('2023-10-28').toISOString(),
+                usageCount: 4,
+                favorite: false
+            },
+            {
+                id: 28,
+                title: "CSS Filter Effects",
+                category: "CSS",
+                description: "Apply filter effects to images and elements.",
+                code: `/* Grayscale filter */
 .grayscale {
     filter: grayscale(100%);
     transition: filter 0.3s ease;
@@ -2299,18 +2201,18 @@ function isElementInViewport(element) {
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
 }`,
-    tags: ["filters", "effects", "images"],
-    createdAt: new Date('2023-11-11').toISOString(),
-    lastUsed: new Date('2023-10-27').toISOString(),
-    usageCount: 6,
-    favorite: true
-},
-{
-    id: 29,
-    title: "Async Utility Functions",
-    category: "JavaScript",
-    description: "Helper functions for working with asynchronous code.",
-    code: `const asyncUtils = {
+                tags: ["filters", "effects", "images"],
+                createdAt: new Date('2023-11-11').toISOString(),
+                lastUsed: new Date('2023-10-27').toISOString(),
+                usageCount: 6,
+                favorite: true
+            },
+            {
+                id: 29,
+                title: "Async Utility Functions",
+                category: "JavaScript",
+                description: "Helper functions for working with asynchronous code.",
+                code: `const asyncUtils = {
     // Delay execution
     delay: function(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
@@ -2393,18 +2295,18 @@ function isElementInViewport(element) {
 // const result = await asyncUtils.retry(() => fetchData());
 // const results = await asyncUtils.parallelLimit([task1, task2, task3], 2);
 // const data = await asyncUtils.timeout(fetch('/api'), 5000);`,
-    tags: ["async", "promises", "utilities"],
-    createdAt: new Date('2023-11-12').toISOString(),
-    lastUsed: new Date('2023-10-26').toISOString(),
-    usageCount: 8,
-    favorite: true
-},
-{
-    id: 30,
-    title: "CSS Transform Examples",
-    category: "CSS",
-    description: "Various CSS transform properties for element manipulation.",
-    code: `/* Basic transforms */
+                tags: ["async", "promises", "utilities"],
+                createdAt: new Date('2023-11-12').toISOString(),
+                lastUsed: new Date('2023-10-26').toISOString(),
+                usageCount: 8,
+                favorite: true
+            },
+            {
+                id: 30,
+                title: "CSS Transform Examples",
+                category: "CSS",
+                description: "Various CSS transform properties for element manipulation.",
+                code: `/* Basic transforms */
 .translate {
     transform: translate(50px, 100px);
 }
@@ -2505,13 +2407,12 @@ function isElementInViewport(element) {
 .flip-card-back {
     transform: rotateY(180deg);
 }`,
-    tags: ["transform", "3d", "animations"],
-    createdAt: new Date('2023-11-13').toISOString(),
-    lastUsed: new Date('2023-10-25').toISOString(),
-    usageCount: 7,
-    favorite: false
-}
-            // ... (other snippets would follow with similar structure)
+                tags: ["transform", "3d", "animations"],
+                createdAt: new Date('2023-11-13').toISOString(),
+                lastUsed: new Date('2023-10-25').toISOString(),
+                usageCount: 7,
+                favorite: false
+            }
         ];
 
         // Get DOM elements
@@ -2554,6 +2455,7 @@ function isElementInViewport(element) {
 
         // Initialize the app
         function init() {
+            console.log('Initializing app with', snippets.length, 'snippets');
             renderCategories();
             initFuse();
             renderSnippets();
@@ -2563,6 +2465,7 @@ function isElementInViewport(element) {
             // Load snippets from localStorage if available
             const savedSnippets = localStorage.getItem('codeSnippets');
             if (savedSnippets) {
+                console.log('Loading snippets from localStorage');
                 snippets = JSON.parse(savedSnippets);
                 initFuse();
                 renderSnippets();
@@ -2578,6 +2481,7 @@ function isElementInViewport(element) {
                 includeScore: true
             };
             fuse = new Fuse(snippets, options);
+            console.log('Fuse.js initialized with', snippets.length, 'snippets');
         }
 
         // Set up event listeners
@@ -2641,14 +2545,18 @@ function isElementInViewport(element) {
 
         // Render categories
         function renderCategories() {
-            // case-normalise categories and preserve original casing for display
-            const categoryMap = snippets.reduce((map, s) => {
-                const key = (s.category || 'Unsorted').trim().toLowerCase();
-                if (!map.has(key)) map.set(key, s.category.trim());
-                return map;
-            }, new Map());
-
-            const categories = ['all', ...Array.from(categoryMap.values())];
+            // Get unique categories from snippets
+            const categories = ['all'];
+            const categorySet = new Set();
+            
+            snippets.forEach(snippet => {
+                if (snippet.category && !categorySet.has(snippet.category)) {
+                    categorySet.add(snippet.category);
+                    categories.push(snippet.category);
+                }
+            });
+            
+            console.log('Rendering categories:', categories);
             
             categoryFilter.innerHTML = '';
             
@@ -2681,7 +2589,9 @@ function isElementInViewport(element) {
 
         // Render snippets based on current filters
         function renderSnippets() {
+            console.log('Rendering snippets...');
             let filteredSnippets = getFilteredSnippets();
+            console.log('Filtered snippets count:', filteredSnippets.length);
             
             // Sort snippets
             filteredSnippets.sort((a, b) => {
@@ -2802,24 +2712,31 @@ function isElementInViewport(element) {
                 const codeBlock = snippetCard.querySelector('pre code');
                 if (codeBlock) hljs.highlightElement(codeBlock);
             });
+            
+            console.log('Rendered', filteredSnippets.length, 'snippets');
         }
 
         // Get filtered snippets based on search and category
         function getFilteredSnippets() {
             let filteredSnippets = snippets;
+            console.log('Total snippets:', snippets.length, 'Current category:', currentCategory);
             
             // Filter by category
             if (currentCategory !== 'all') {
-                const cc = currentCategory.trim().toLowerCase();
-                filteredSnippets = filteredSnippets.filter(snippet => 
-                    (snippet.category || '').trim().toLowerCase() === cc
-                );
+                filteredSnippets = filteredSnippets.filter(snippet => {
+                    const matches = snippet.category === currentCategory;
+                    console.log(`Snippet "${snippet.title}" category: "${snippet.category}", matches: ${matches}`);
+                    return matches;
+                });
             }
+            
+            console.log('After category filter:', filteredSnippets.length);
             
             // Filter by search term using Fuse.js
             if (currentSearch.trim()) {
                 const results = fuse.search(currentSearch);
                 filteredSnippets = results.map(result => result.item);
+                console.log('After search filter:', filteredSnippets.length);
             }
             
             return filteredSnippets;
@@ -2837,16 +2754,20 @@ function isElementInViewport(element) {
             
             const cssCount = snippets.filter(s => s.category === 'CSS').length;
             cssSnippets.textContent = cssCount;
+            
+            console.log('Stats updated - Total:', snippets.length, 'JS:', jsCount, 'CSS:', cssCount);
         }
 
         // Handle search input
         function handleSearch(e) {
             currentSearch = e.target.value;
+            console.log('Search term:', currentSearch);
             renderSnippets();
         }
 
         // Filter by category
         function filterByCategory(category) {
+            console.log('Filtering by category:', category);
             currentCategory = category;
             renderCategories();
             renderSnippets();
